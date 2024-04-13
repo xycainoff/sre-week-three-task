@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: strype-app
+  name: upcommerce-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: strype-app
+      app: upcommerce-app
   template:
     metadata:
       labels:
-        app: strype-app
+        app: upcommerce-app
     spec:
       containers:
-        - name: stripe
-          image: uonyeka/stripe:linux-amd64 # Use uonyeka/stripe:linux-arm64 if you are building locally on a Mac
+        - name: upcommerce
+          image: uonyeka/upcommerce:v3
           ports:
-            - containerPort: 5003
+            - containerPort: 5000
           imagePullPolicy: Always
           resources:
             limits:
