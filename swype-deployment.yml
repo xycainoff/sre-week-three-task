@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: strype-app
+  name: swype-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: strype-app
+      app: swype-app
   template:
     metadata:
       labels:
-        app: strype-app
+        app: swype-app
     spec:
       containers:
         - name: stripe
